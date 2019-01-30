@@ -1,0 +1,13 @@
+<div *ngIf="items?.length > 0;else noitems">
+ <ul *ngFor="let item of items" class="collection">
+<li class="collection-item">
+  {{item.id}} : {{item.description}}
+</li>
+</ul>
+</div>
+<ng-template #noitems>
+  <hr>
+  <h4>
+    their are no items to display
+    </h4>
+  </ng-template>
