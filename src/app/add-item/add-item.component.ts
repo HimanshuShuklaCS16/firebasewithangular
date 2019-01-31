@@ -7,25 +7,18 @@ import {ItemsService} from '../items.service';
   styleUrls: ['./add-item.component.css']
 })
 export class AddItemComponent implements OnInit {
-  ngOnInit(){
-    
+item1:item={title:'',description:''};
+  constructor(private itemsservice:ItemsService) { }
+
+  ngOnInit() {
   }
- Item:item{
-  title:'',
-  description:''
+onSubmit(){
+  if(this.item1.title!==''&&this.item1.description!=='')
+  {
+    this.itemsservice.addItem(this.item1);
+    this.item1.title='';
+    this.item1.description='';
+
+  }
 }
-  constructor(private itemservice:ItemsService) {
-
-   }
-
-
-  onsubmit(){
-    if(Item.title!==' ' && Item.description!==' ')
-    {
-      this.itemservice.addItem(this.Item);
-      this.Item.title='';
-      this.Item.description='';
-    }
-  }
-
 }

@@ -9,6 +9,7 @@ import {environment} from '../environments/environment';
 import { ItemsComponent } from './items/items.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { AddItemComponent } from './add-item/add-item.component';
+import {FormsModule} from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +20,7 @@ import { AddItemComponent } from './add-item/add-item.component';
   imports: [
     BrowserModule,
     AngularFireModule.initializeApp(environment.firebase, 'angularfirebase'),
-   AngularFirestoreModule
+   AngularFirestoreModule,FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
