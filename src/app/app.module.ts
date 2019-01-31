@@ -7,10 +7,14 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import {environment} from '../environments/environment';
 import { ItemsComponent } from './items/items.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { AddItemComponent } from './add-item/add-item.component';
 @NgModule({
   declarations: [
     AppComponent,
-    ItemsComponent
+    ItemsComponent,
+    NavbarComponent,
+    AddItemComponent
   ],
   imports: [
     BrowserModule,

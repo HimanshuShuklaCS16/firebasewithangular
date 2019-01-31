@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ItemsService} from '../items.service';
 import {item} from '../models/item';
-import {itemid} from '../models/itemid';
 @Component({
   selector: 'app-items',
   templateUrl: './items.component.html',

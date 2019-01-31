@@ -1,4 +1,4 @@
-<div *ngIf="items?.length > 0;else noitems">
+<div *ngIf="items?.length > 0;else noitems" >
  <ul *ngFor="let item of items" class="collection">
 <li class="collection-item">
   {{item.id}} : {{item.description}}
